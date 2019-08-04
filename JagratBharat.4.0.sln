@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JagratBharat.4.0", "JagratBharat.4.0\JagratBharat.4.0.csproj", "{CAE4BAF1-0322-4BAB-AF48-0C5122ADC12D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JagratBharatAdmin.4.0", "JagratBharatAdmin.4.0\JagratBharatAdmin.4.0.csproj", "{B82AED18-70E8-496D-B02E-B123445C532B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAE4BAF1-0322-4BAB-AF48-0C5122ADC12D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE4BAF1-0322-4BAB-AF48-0C5122ADC12D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE4BAF1-0322-4BAB-AF48-0C5122ADC12D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE4BAF1-0322-4BAB-AF48-0C5122ADC12D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B82AED18-70E8-496D-B02E-B123445C532B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82AED18-70E8-496D-B02E-B123445C532B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B82AED18-70E8-496D-B02E-B123445C532B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B82AED18-70E8-496D-B02E-B123445C532B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87B5AFD9-41BA-4C9C-A5A4-582FBF08F88C}
+	EndGlobalSection
+EndGlobal
