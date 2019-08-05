@@ -67,6 +67,8 @@
     <None Include="db.dbml.layout">
       <DependentUpon>db.dbml</DependentUpon>
     </None>
+    <Content Include="Default\flag.gif" />
+    <Content Include="Default\flag2.gif" />
     <Content Include="getImage.ashx" />
     <Content Include="Main.Master" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />

@@ -22,22 +22,27 @@
                 padding: 0px;
                 margin: 0px auto 0px auto;
                 height: 300px;
+                overflow-y: scroll;
             }
 
-                .leftSidebar > ul > li {
-                    width: 80%;
-                    padding: 10px;
-                    text-align: center;
-                    border: 1px solid rgba(0,0,0,.1);
-                    background-color: rgba(98, 98, 98, 0.68);
-                    border-radius: 5px;
-                    margin: 5px auto 0px auto;
-                }
+            .leftSidebar > .flag_image {
+                width:100%;
+            }
 
-                    .leftSidebar > ul > li > a {
-                        text-decoration: none;
-                        color: #fff;
-                    }
+            .leftSidebar > ul > li {
+                width: 80%;
+                padding: 10px;
+                text-align: center;
+                border: 1px solid rgba(0,0,0,.1);
+                background-color: rgba(98, 98, 98, 0.68);
+                border-radius: 5px;
+                margin: 5px auto 0px auto;
+            }
+
+                .leftSidebar > ul > li > a {
+                    text-decoration: none;
+                    color: #fff;
+                }
         /*Main Content*/
         .mainContent {
             padding: 10px;
@@ -223,9 +228,10 @@
             .zodiac:hover .tooltipText {
                 visibility: visible;
             }
-            .tooltipText:active .tooltipText{
-                visibility:hidden;
-            }
+
+        .tooltipText:active .tooltipText {
+            visibility: hidden;
+        }
 
         .watch {
             margin-top: 10px;
@@ -264,8 +270,6 @@
             .watch {
                 padding-bottom: 20px;
             }
-
-          
         }
     </style>
 
@@ -277,6 +281,8 @@
             <ul runat="server" id="categoryList">
                 <%-- Auto Generated Categories --%>
             </ul>
+            <img src="Default/flag2.gif" alt="National_Flag" class="flag_image" />
+            <p style="padding:10px;background-color:#e23e00;color:#fff; top:-100px;text-align: center">Jai Hind</p>
         </div>
         <div class="mainContent">
             <h3>Top Stories</h3>
