@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="JagratBharatNews.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <meta property="og:url" content="https://www.your-domain.com/your-page.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="The Jagrat Bharat News" />
+    <meta property="og:description" content="Satya ra sandhana" />
+    <meta property="og:image" content="https://www.your-domain.com/path/image.jpg" />
     <style>
         .container {
             max-width: 1200px;
@@ -15,6 +21,7 @@
         .leftSidebar {
             background-color: rgb(255, 255, 255);
             box-shadow: 0px 1px 3px black;
+            position: relative;
         }
 
             .leftSidebar > ul {
@@ -26,7 +33,17 @@
             }
 
             .leftSidebar > .flag_image {
-                width:100%;
+                width: 100%;
+            }
+
+            .leftSidebar > p.flag_text {
+                padding: 10px 0px;
+                background-color: #e23e00;
+                color: #fff;
+                position: absolute;
+                top: 650px;
+                width: 100%;
+                text-align: center
             }
 
             .leftSidebar > ul > li {
@@ -282,7 +299,7 @@
                 <%-- Auto Generated Categories --%>
             </ul>
             <img src="Default/flag2.gif" alt="National_Flag" class="flag_image" />
-            <p style="padding:10px;background-color:#e23e00;color:#fff; top:-100px;text-align: center">Jai Hind</p>
+            <p class="flag_text">Jai Hind</p>
         </div>
         <div class="mainContent">
             <h3>Top Stories</h3>
@@ -290,6 +307,12 @@
                 <%-- Auto Generated Cards --%>
             </div>
             <div style="height: 200px; margin: 20px 0px 10px 0px">Advertisement</div>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0"></script>
+
+            <div class="fb-page" data-href="https://www.facebook.com/Jagratbhara/?ref=br_rs" data-tabs="timeline" data-width="500" data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/Jagratbhara/?ref=br_rs" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Jagratbhara/?ref=br_rs">Jagratbharatnews.com</a></blockquote>
+            </div>
         </div>
         <div class="rightSidebar">
             <div class="video">
