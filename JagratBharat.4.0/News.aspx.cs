@@ -59,8 +59,11 @@ namespace JagratBharatNews
             og_title.Attributes["content"] = post.HeadLine;
             og_description.Attributes["content"] = db.Paragraphs.Where(n => n.PostID == post.Id).Select(n => n.Paragraphs).FirstOrDefault();
 
-            var path =new Uri(Page.Request.Url,"getImage.ashx");
-            og_image.Attributes["content"] =  path + "?PostID=" + post.Id + "&Size=thumbnail";
+            var path = new Uri(Page.Request.Url, "getImage.ashx");
+            var shareURL = new Uri(Page.Request.Url, Request.RawUrl).ToString();
+            og_image.Attributes["content"] = path + "?PostID=" + post.Id + "&Size=thumbnail";
+            og_url.Attributes["content"] = shareURL;
+          
 
 
         }
@@ -85,7 +88,7 @@ namespace JagratBharatNews
             foreach (var paragraph in paragraphs)
             {
                 PostContent.InnerHtml += "<p class='justified'>" + paragraph.Paragraphs + "</p>";
-                if (paragraphs[paragraphs.Count()-1] == paragraph)
+                if (paragraphs[paragraphs.Count() - 1] == paragraph)
                 {
                     PostContent.InnerHtml += videoFrame;
                 }

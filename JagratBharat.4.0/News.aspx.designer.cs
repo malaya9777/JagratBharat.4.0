@@ -22,6 +22,15 @@ namespace JagratBharatNews {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl og_site_name;
         
         /// <summary>
+        /// og_url control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl og_url;
+        
+        /// <summary>
         /// og_title control.
         /// </summary>
         /// <remarks>

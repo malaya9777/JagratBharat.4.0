@@ -310,7 +310,7 @@
             <div id="fb-root"></div>
             <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0"></script>
 
-            <div class="fb-page" data-href="https://www.facebook.com/Jagratbhara/?ref=br_rs" data-tabs="timeline" data-width="500" data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <div class="fb-page" data-href="https://www.facebook.com/Jagratbhara/?ref=br_rs" data-tabs="timeline" data-width="" data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                 <blockquote cite="https://www.facebook.com/Jagratbhara/?ref=br_rs" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Jagratbhara/?ref=br_rs">Jagratbharatnews.com</a></blockquote>
             </div>
         </div>
@@ -328,6 +328,16 @@
             <div class="advertisement">
                 <p>Advertisement</p>
                 <div class="ad">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle"
+                        style="display: block"
+                        data-ad-format="fluid"
+                        data-ad-layout-key="-fb+5w+4e-db+86"
+                        data-ad-client="ca-pub-1465461908442997"
+                        data-ad-slot="3141786085"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
             </div>
             <div class="other">

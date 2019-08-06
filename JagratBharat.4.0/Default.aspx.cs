@@ -17,7 +17,7 @@ namespace JagratBharatNews
                 using (dbDataContext db = new dbDataContext())
                 {
                     var categories = db.Categories.ToList();
-                    var posts = db.Posts.Where(n=>n.Submitted==true).ToList();
+                    var posts = db.Posts.Where(n => n.Submitted == true).ToList();
 
 
                     loadScroller(posts);
@@ -53,8 +53,17 @@ namespace JagratBharatNews
 
         private void loadRecentVideo(List<Post> posts)
         {
-            var latestVieo = posts.OrderByDescending(n => n.Id).Select(n => n.VideoPath).FirstOrDefault();
-            string[] splitedVideopath = latestVieo.Split('/');
+            var latestVieo = posts.OrderByDescending(n => n.Id).Select(n => n.VideoPath);
+            string[] splitedVideopath = { };
+            foreach (var v in latestVieo)
+            {
+                if (v != null && null != "")
+                {
+                    splitedVideopath = v.Split('/');
+                    break;
+                }
+            }
+
             videoFrame.InnerHtml = "<iframe width='100%' height='140px' src='https://www.youtube.com/embed/" + splitedVideopath[splitedVideopath.Length - 1]
                       + "' frameborder='0' allow='accelerometer; autoplay; encrypted - media;" +
                         " gyroscope; picture -in-picture' allowfullscreen></iframe>";
@@ -111,7 +120,7 @@ namespace JagratBharatNews
             string scrollerText = "";
             foreach (var i in posts.Where(n => n.SelectedScroller == true))
             {
-                scrollerText += "<a href='News.aspx?ID=" +globalMethods.EncodeID(i.Id) + "' target='_blank'>" + i.HeadLine + "</a> || ";
+                scrollerText += "<a href='News.aspx?ID=" + globalMethods.EncodeID(i.Id) + "' target='_blank'>" + i.HeadLine + "</a> || ";
             }
             para.InnerHtml = scrollerText;
 
