@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Jagrat Bharat News</title>
     <%-- Custom Style Sheet --%>
-    <link href="Style/style.css" rel="stylesheet" />
+   
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <%-- Font awesome CSS --%>

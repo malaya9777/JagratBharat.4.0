@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Contact Us|Jagrat Bharat News" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="JagratBharatNews.ContactUs" %>
+﻿<%@ Page Title="Contact Us | Jagrat Bharat News" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="JagratBharatNews.ContactUs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>

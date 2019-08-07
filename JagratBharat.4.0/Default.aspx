@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home|Jagrat Bharat News" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="JagratBharatNews.index" %>
+﻿<%@ Page Title="Home | Jagrat Bharat News" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="JagratBharatNews.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
@@ -140,21 +140,24 @@
             border-radius: 3px;
         }
 
-        .scrollerContainer{
-            width:100%;
-            overflow:hidden;
+        .scrollerContainer {
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            height: 30px;
         }
+
         .scroll {
-            height: 40px;
+            height: 30px;
             background-color: red;
-            color: white;
-            font-weight: bold;
-            
+            color: #fff;
+            overflow-x: hidden;
+            overflow-y: hidden;
         }
 
             .scroll > p {
                 margin: 0px;
-                padding: 5px;
+                padding: 5px 0px;
                 white-space: nowrap;
                 transform: translateX(180px);
                 animation: scrolFromRight 60s linear infinite;
@@ -287,11 +290,10 @@
             .container {
                 margin: 70px auto 30px auto;
                 display: grid;
-                grid-template-columns: 1fr;
-            }
-            .scrollerContainer{
-                width:100vw!important;
-            }
+                grid-template-columns:99%;
+            }        
+
+           
 
             .leftSidebar {
                 text-align: center;
