@@ -17,16 +17,15 @@
             width: auto;
             display: grid;
             grid-template-columns: 32% 32% 34%;
-            grid-gap:1%;
-            align-content:center;
+            grid-gap: 1%;
+            align-content: center;
         }
 
         .box {
             color: #fff;
             background-color: #0e084f;
-            padding: 5px 20px;            
+            padding: 5px 20px;
             font-size: 50px;
-            
         }
 
             .box > p {
@@ -68,15 +67,17 @@
         <div class="mainContainer">
             <div class="box byPhone">
                 <i class="fa fa-phone"></i>
-                <p><i class="fa fa-mobile"></i>Mobile: +91 9123456798</p>
-                <p><i class="fa fa-mobile"></i>Mobile: +91 9123456798</p>
-                <p><i class="fa fa-phone"></i>Land-Phone: +91 9123456798</p>
+                <p><i class="fa fa-pencil"></i>Susil Kumar Aich(Chief Editor)</p>
+                <p><i class="fa fa-mobile"></i>Mobile: +91 9861094319</p>
+                <p><i class="fa fa-pencil"></i>Susant Kumar Samal(Editor)</p>
+                <p><i class="fa fa-mobile"></i>Mobile: +91 7008911504</p>
             </div>
             <div class="box byMail">
                 <i class="fa fa-envelope"></i>
-                <p>Angul</p>
-                <p>Odisha, India,759106 </p>
+                <p>Nuahata, Banarpal</p>
+                <p>Angul, Odisha, India,759128 </p>
                 <p>official@jagratbharatnew.com </p>
+
             </div>
             <div class="box bySocialMedia">
                 <i class="fa fa-globe"></i>
