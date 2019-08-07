@@ -22,6 +22,15 @@ namespace JagratBharatNews {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl categoryList;
         
         /// <summary>
+        /// para control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl para;
+        
+        /// <summary>
         /// cards control.
         /// </summary>
         /// <remarks>
@@ -38,15 +47,6 @@ namespace JagratBharatNews {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl videoFrame;
-        
-        /// <summary>
-        /// para control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl para;
         
         /// <summary>
         /// txtDate control.

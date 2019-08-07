@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="JagratBharatNews.index" %>
+﻿<%@ Page Title="Home|Jagrat Bharat News" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="JagratBharatNews.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
@@ -121,7 +121,7 @@
             .card:hover {
                 transform: scale(1.2);
                 z-index: 5;
-                position:relative;
+                position: relative;
             }
 
 
@@ -138,15 +138,18 @@
         .video {
             border: 1px solid rgba(0, 0, 0, .1);
             border-radius: 3px;
-            overflow-x: hidden;
-            overflow-y: hidden;
         }
 
+        .scrollerContainer{
+            width:100%;
+            overflow:hidden;
+        }
         .scroll {
-            height: 30px;
+            height: 40px;
             background-color: red;
             color: white;
             font-weight: bold;
+            
         }
 
             .scroll > p {
@@ -286,6 +289,9 @@
                 display: grid;
                 grid-template-columns: 1fr;
             }
+            .scrollerContainer{
+                width:100vw!important;
+            }
 
             .leftSidebar {
                 text-align: center;
@@ -347,6 +353,14 @@
         </div>
         <div class="mainContent">
             <h3>Top Stories</h3>
+            <div class="scrollerContainer">
+                <div class="scroll" id="scroll">
+                    <p id="para" runat="server">
+                        <%-- Auto Generated Scroll --%>
+                    </p>
+                </div>
+            </div>
+
             <div class="cards" id="cards" runat="server">
                 <%-- Auto Generated Cards --%>
             </div>
@@ -360,11 +374,6 @@
             <div class="video">
                 <div runat="server" id="videoFrame">
                     <%-- Auto Generated Video --%>
-                </div>
-                <div class="scroll" id="scroll">
-                    <p id="para" runat="server">
-                        <%-- Auto Generated Scroll --%>
-                    </p>
                 </div>
             </div>
             <div class="advertisement">
@@ -385,13 +394,10 @@
             <div class="other">
                 <div class="callender">
                     <div id="txtDate" runat="server" class="date">
-                        9
                     </div>
                     <div id="txtEvent" runat="server" class="event">
-                        Sunday
                     </div>
                     <div id="txtMonthYear" runat="server" class="monthYear">
-                        th June 2019
                     </div>
                 </div>
                 <div class="rashifal">

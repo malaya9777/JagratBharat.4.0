@@ -123,7 +123,7 @@ namespace JagratBharatNews
             string scrollerText = "";
             foreach (var i in posts.Where(n => n.SelectedScroller == true))
             {
-                scrollerText += "<a href='News.aspx?ID=" + globalMethods.EncodeID(i.Id) + "' target='_blank'>" + i.HeadLine + "</a> || ";
+                scrollerText += "<a href='News.aspx?ID=" + globalMethods.EncodeID(i.Id) + "' target='_blank'>" + i.HeadLine + "</a> &#8734; ";
             }
             para.InnerHtml = scrollerText;
 
