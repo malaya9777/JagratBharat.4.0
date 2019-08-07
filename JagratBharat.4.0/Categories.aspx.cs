@@ -29,7 +29,7 @@ namespace JagratBharatNews
                 var cards = "";
                 using (dbDataContext db = new dbDataContext())
                 {
-                    foreach (var c in db.Posts.Where(n => n.Category == r.Id).OrderByDescending(n=>n.NewsDate).Take(10))
+                    foreach (var c in db.Posts.Where(n => n.Category == r.Id && n.Submitted==true).OrderByDescending(n=>n.NewsDate).Take(10))
                     {
                         cards += "<div class='card' onclick='redirect(\"News.aspx?ID=" + globalMethods.EncodeID(c.Id) + "\");'>" +
                             "<img src='getImage.ashx?PostID=" + c.Id + "&Size=thumbnail' alt=''/>" +

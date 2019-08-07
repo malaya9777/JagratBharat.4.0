@@ -54,7 +54,7 @@
                 padding: 10px;
                 text-align: center;
                 border: 1px solid rgba(0,0,0,.1);
-                background-color: rgba(98, 98, 98, 0.68);
+                background-color: black;
                 border-radius: 5px;
                 margin: 5px auto 0px auto;
             }
@@ -121,6 +121,7 @@
             .card:hover {
                 transform: scale(1.2);
                 z-index: 5;
+                position:relative;
             }
 
 

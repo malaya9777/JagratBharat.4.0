@@ -57,7 +57,7 @@ namespace JagratBharatNews
             string[] splitedVideopath = { };
             foreach (var v in latestVieo)
             {
-                if (v != null && null != "")
+                if (v != null && v != "")
                 {
                     splitedVideopath = v.Split('/');
                     break;
@@ -71,7 +71,7 @@ namespace JagratBharatNews
 
         private void loadCards(List<Post> posts)
         {
-            var cardsInfo = posts.OrderByDescending(n => n.Id).Take(6);
+            var cardsInfo = posts.OrderByDescending(n => n.Id).Take(12);
             string infoString = "";
             foreach (var c in cardsInfo)
             {             
