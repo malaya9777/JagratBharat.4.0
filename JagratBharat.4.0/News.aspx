@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
         .container {
             max-width: 800px;
             margin: 80px auto 10px auto;
@@ -100,6 +101,14 @@
         .fb-like {
             width: 50%;
         }
+        .whatsaap{
+            background-color:#24e51c;
+            text-decoration:none;
+            color:#fff;
+            padding:5px;
+            font-size:11px;
+            border-radius:3px;
+        }
 
         @media(max-width:600px) {
             .header {
@@ -139,12 +148,12 @@
                 <div class="info">
                     <p id="info" class="infoDetails" runat="server"></p>
                 </div>
-                <div id="fb-root"></div>
-                <div id="fb-root"></div>
+
                 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0"></script>
-                <div class="fb-like" data-href="" data-width="" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                <div class="fb-share-button" data-href="" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                <a class="whatsaap" id="whatsaapbutton" runat="server" href="whatsaap://send?text=" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> Share</a>
                 <div id="PostContent" runat="server"></div>
-                <div class="fb-like" data-href="" data-width="" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                <div class="fb-share-button" data-href="" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
 
                 <h5 class="relatedNews">Related News</h5>
 

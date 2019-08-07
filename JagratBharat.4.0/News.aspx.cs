@@ -45,11 +45,18 @@ namespace JagratBharatNews
                 loadParagraph(paragraphs, loadVideo(post.VideoPath));
                 loadCards(post.Category, post.Id);
                 loadMetas(post);
+                loadWhatsaapButton(post);
             }
             else
             {
                 Response.Redirect("Index.aspx");
             }
+
+        }
+
+        private void loadWhatsaapButton(Post post)
+        {
+            whatsaapbutton.HRef = "whatsapp://send?text=" + post.HeadLine.Replace(' ', '+') + " " + new Uri(Page.Request.Url, Request.RawUrl);
 
         }
 
@@ -63,7 +70,7 @@ namespace JagratBharatNews
             var shareURL = new Uri(Page.Request.Url, Request.RawUrl).ToString();
             og_image.Attributes["content"] = path + "?PostID=" + post.Id + "&Size=thumbnail";
             og_url.Attributes["content"] = shareURL;
-          
+
 
 
         }
