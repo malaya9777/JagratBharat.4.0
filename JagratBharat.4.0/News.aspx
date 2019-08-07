@@ -3,7 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
         .container {
             max-width: 800px;
             margin: 80px auto 10px auto;

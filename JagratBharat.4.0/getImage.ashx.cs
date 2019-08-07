@@ -17,17 +17,25 @@ namespace JagratBharatNews
         {
             using (dbDataContext db = new dbDataContext())
             {
-                var postID = Convert.ToInt32(context.Request.QueryString["PostID"]);
-                string Size = context.Request.QueryString["Size"].ToString().ToLower();
-                var post = db.Posts.Where(n => n.Id == postID).SingleOrDefault();
-                if (post != null)
+                try
                 {
-                    var img = BinaryToImage(post.Image.ToArray());
-                    var imgArray = GetBytesFromImage(generateImage(img, Size));
-                    context.Response.ContentType = "image/jpg";
-                    context.Response.OutputStream.Write(imgArray, 0, imgArray.Length);
-                    context.Response.Flush();
-                    context.Response.End();
+                    var postID = Convert.ToInt32(context.Request.QueryString["PostID"]);
+                    string Size = context.Request.QueryString["Size"].ToString().ToLower();
+                    var post = db.Posts.Where(n => n.Id == postID).SingleOrDefault();
+                    if (post != null)
+                    {
+                        var img = BinaryToImage(post.Image.ToArray());
+                        var imgArray = GetBytesFromImage(generateImage(img, Size));
+                        context.Response.ContentType = "image/jpg";
+                        context.Response.OutputStream.Write(imgArray, 0, imgArray.Length);
+                        context.Response.Flush();
+                        context.Response.End();
+                    }
+                }
+                catch (Exception)
+                {
+                    context.Response.Write("No image found!");
+                   
                 }
 
             }

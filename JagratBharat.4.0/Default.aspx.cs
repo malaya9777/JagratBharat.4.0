@@ -74,9 +74,12 @@ namespace JagratBharatNews
             var cardsInfo = posts.OrderByDescending(n => n.Id).Take(6);
             string infoString = "";
             foreach (var c in cardsInfo)
-            {
-                infoString += "<div class='card'><span class='catSpan'>" + globalMethods.getCategoryName(c.Category) + "</span><img src='getImage.ashx?PostID=" + c.Id + "&Size=thumbnail' alt='" +
-                    c.HeadLine + "'><div class='cardHeadline'>" + c.HeadLine + " <a href='News.aspx?ID=" + globalMethods.EncodeID(c.Id) + "' target='_blank' style='font-size:10px'>Read more..</a></div></div>";
+            {             
+
+                infoString += " <a href='News.aspx?ID=" + globalMethods.EncodeID(c.Id) + "' target='_blank' class='card_container'> <div class='card' style='background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.1)),border-box,url(getImage.ashx?PostID=" + c.Id +"&Size=thumbnail), no-repeat, center; overflow: hidden;'>" +
+                    " <span class='catSpan'>" + globalMethods.getCategoryName(c.Category) + "</span>" +
+                    "<div class='cardHeadline'>" +globalMethods.Truncate(c.HeadLine,30) + "</div></div></a>";
+
             }
             cards.InnerHtml = infoString;
         }

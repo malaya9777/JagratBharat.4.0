@@ -8,6 +8,9 @@
     <meta property="og:description" content="Satya ra sandhana" />
     <meta property="og:image" content="https://www.your-domain.com/path/image.jpg" />
     <style>
+        .advertisement {
+        }
+        /*Before Ad*/
         .container {
             max-width: 1200px;
             height: auto;
@@ -63,10 +66,17 @@
         /*Main Content*/
         .mainContent {
             padding: 10px;
-            text-align: center;
             background-color: rgba(255, 255, 255, 1);
             box-shadow: 0px 1px 3px black;
         }
+
+            .mainContent > h3 {
+                text-align: center;
+                padding: 10px 0px;
+                margin: 0;
+                background-color: #212121;
+                color: white;
+            }
 
         .catSpan {
             position: relative;
@@ -75,10 +85,16 @@
             float: left;
             display: block;
             color: white;
-            top: 15px;
+            font-size: 10px;
+            top: -5px;
+            left: -5px;
+            border-bottom-right-radius: 8px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
         }
 
         .cardHeadline {
+            position: relative;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
             text-align: left;
         }
 
@@ -90,25 +106,21 @@
             background-color: rgba(0,0,0,.1);
         }
 
-        .card {
-            background-color: rgba(255, 255, 255, 1);
-            border: 1px solid rgba(0, 0, 0, .1);
-            padding: 5px;
-            border-radius: 5px;
+        .card_container {
+            color: #fff;
+            text-decoration: none;
         }
 
-            .card > img {
-                width: 100%;
-            }
+        .card {
+            padding: 5px;
+            border-radius: 5px;
+            transition: .5s;
+            height: 110px;
+        }
 
-            .card > h4 {
-                text-align: left;
-                text-indent: 10px;
-            }
-
-            .card > p {
-                padding: 5px;
-                text-align: justify;
+            .card:hover {
+                transform: scale(1.2);
+                z-index: 5;
             }
 
 
@@ -275,13 +287,44 @@
             }
 
             .leftSidebar {
-                display: none;
+                text-align: center;
             }
+
+                .leftSidebar > ul {
+                    display: none;
+                }
+
+                .leftSidebar > .flag_image {
+                    width: 30vw;
+                }
+
+                .leftSidebar > p.flag_text {
+                    top: unset;
+                    bottom: 0px;
+                }
+
+                .leftSidebar > .catHead {
+                    display: none;
+                }
 
             .cards {
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
                 grid-gap: 5px;
+            }
+
+            .card {
+                height: 200px;
+                background-size: cover !important;
+                z-index: 5;
+            }
+
+                .card:hover {
+                    transform: none;
+                }
+
+            .catSpan {
+                font-size: 14px;
             }
 
             .watch {
@@ -294,7 +337,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
         <div class="leftSidebar">
-            <p style="margin: 10px auto 5px auto; text-align: center">Categories</p>
+            <p style="margin: 10px auto 5px auto; text-align: center" class="catHead">Categories</p>
             <ul runat="server" id="categoryList">
                 <%-- Auto Generated Categories --%>
             </ul>
@@ -306,13 +349,11 @@
             <div class="cards" id="cards" runat="server">
                 <%-- Auto Generated Cards --%>
             </div>
-            <div style="height: 200px; margin: 20px 0px 10px 0px">Advertisement</div>
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0"></script>
-
-            <div class="fb-page" data-href="https://www.facebook.com/Jagratbhara/?ref=br_rs" data-tabs="timeline" data-width="" data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                <blockquote cite="https://www.facebook.com/Jagratbhara/?ref=br_rs" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Jagratbhara/?ref=br_rs">Jagratbharatnews.com</a></blockquote>
+            <div class="mainNews">
             </div>
+            <div style="height: 200px; margin: 20px 0px 10px 0px" class="advertisement">Advertisement</div>
+            <div id="fb-root"></div>
+
         </div>
         <div class="rightSidebar">
             <div class="video">
