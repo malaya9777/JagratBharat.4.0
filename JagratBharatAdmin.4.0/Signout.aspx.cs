@@ -11,7 +11,7 @@ namespace JagratBharatNewsAdmin
             Session.Abandon();
             Session.Clear();
             FormsAuthentication.SignOut();
-            Response.Redirect("login.aspx", false);
+            Response.Redirect("Default.aspx", false);
 
         }
     }
