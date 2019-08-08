@@ -13,7 +13,7 @@
             background-color: #fff;
             padding: 5px;
             grid-template-columns: 30% 30% 30%;
-            grid-gap: 3%;
+            grid-gap: 5%;
         }
 
             .mainContent > .card {

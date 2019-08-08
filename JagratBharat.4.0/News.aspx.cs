@@ -37,7 +37,7 @@ namespace JagratBharatNews
             var paragraphs = db.Paragraphs.Where(n => n.PostID == post.Id).ToList();
             if (post != null)
             {
-                Page.Title = post.HeadLine;
+                Page.Title = post.HeadLine +" | Jagrat Bharat News";
                 PostHeader.InnerText = post.HeadLine;
                 category.InnerText = globalMethods.getCategoryName(post.Category);
                 info.InnerText = post.NewsDate.Value.ToLongDateString();

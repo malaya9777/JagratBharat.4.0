@@ -42,6 +42,7 @@ namespace JagratBharatNews
                             "</div>";
                 }
                 heading.InnerText = db.Categories.Where(n => n.Id == catID).Select(n => n.Name).SingleOrDefault();
+                Page.Title = heading.InnerText + " | Jagrat Bharat News";
                 mainContent.InnerHtml = cards;
             }
         }
