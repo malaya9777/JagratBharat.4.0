@@ -47,6 +47,7 @@
             </div>
             <div class="submit">
                 <asp:Button runat="server" Text="Submit" CssClass="btnSubmit" ID="btnSubmit" OnClick="btnSubmit_Click" ValidationGroup="from"/>
+                <asp:Button ID="btnDelete" runat="server" Text="Delete older data" CssClass="btn red" OnClick="btnDelete_Click" OnClientClick="return confirm('Are you sure to delete older data?')" Width="100px" />
             </div>
         </div>
         <div class="todaysHoroscope">

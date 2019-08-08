@@ -130,6 +130,15 @@ namespace JagratBharatNews {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor whatsaapbutton;
         
         /// <summary>
+        /// twitterbutton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor twitterbutton;
+        
+        /// <summary>
         /// PostContent control.
         /// </summary>
         /// <remarks>

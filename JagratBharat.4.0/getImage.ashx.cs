@@ -74,6 +74,9 @@ namespace JagratBharatNews
                 var newImage = new Bitmap(newSize.Width, newSize.Height);
                 using (var g = Graphics.FromImage(newImage))
                 {
+                    g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+                    g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                    g.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
                     g.DrawImage(img, 0, 0, newSize.Width, newSize.Height);
                 }
                 return newImage;
@@ -81,7 +84,15 @@ namespace JagratBharatNews
             }
             else
             {
-                return img;
+                var newImage = new Bitmap(img.Width, img.Height);
+                using (var g = Graphics.FromImage(newImage))
+                {
+                    g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+                    g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                    g.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+                    g.DrawImage(img, 0, 0, img.Width, img.Height);
+                }
+                return newImage;
             }
         }
         public byte[] GetBytesFromImage(Image img)

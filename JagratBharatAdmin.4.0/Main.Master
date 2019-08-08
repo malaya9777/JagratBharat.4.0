@@ -109,6 +109,10 @@
             background-color: #ff6a00;
             color: #fff;
         }
+        .red {
+            background-color: #ff0000;
+            color: #fff;
+        }
 
         .modalBackground {
             background-color: Gray;

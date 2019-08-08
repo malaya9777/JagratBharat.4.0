@@ -27,5 +27,6 @@ namespace JagratBharatNews
         {
             return value.Length <= maxChars ? value : value.Substring(0, maxChars) + "...";
         }
+
     }
 }

@@ -57,7 +57,7 @@ namespace JagratBharatNews
         private void loadWhatsaapButton(Post post)
         {
             whatsaapbutton.HRef = "whatsapp://send?text=" + post.HeadLine.Replace(' ', '+') + " " + new Uri(Page.Request.Url, Request.RawUrl);
-
+            twitterbutton.HRef = "https://twitter.com/intent/tweet?text=" + post.HeadLine.Replace(' ', '+') + " " + new Uri(Page.Request.Url, Request.RawUrl);
         }
 
         private void loadMetas(Post post)

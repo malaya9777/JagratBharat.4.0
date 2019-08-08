@@ -138,6 +138,11 @@
                             <asp:Button ID="btnSubmit" runat="server" CssClass='<%# Eval("SendButtonCss")%>' Text='<%# Eval("SendButtonTxt")%>' CommandArgument='<%# Eval("Id")%>' CommandName="sendPost" />
                         </ItemTemplate>
                     </asp:TemplateField>
+                     <asp:TemplateField HeaderText="Delete">
+                        <ItemTemplate>
+                            <asp:Button ID="btnDelete" runat="server" CssClass='btn red' Text='Delete' CommandArgument='<%# Eval("Id")%>' CommandName="deletePost" OnClientClick=" return confirm('Are you sure?');" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
 
                 </Columns>
             </asp:GridView>

@@ -166,7 +166,7 @@
         </div>
         <div class="smallPanel LatestNews">
             <div class="boxHeader">Lastes News</div>
-            <asp:GridView runat="server" ID="grdNews" AutoGenerateColumns="false" HeaderStyle-HorizontalAlign="Left" RowStyle-Height="30" BorderStyle="None" GridLines="Horizontal" Width="100%">
+            <asp:GridView runat="server" ID="grdNews" AutoGenerateColumns="false" AllowPaging="true" PageSize="10" OnPageIndexChanging="grdNews_PageIndexChanging" HeaderStyle-HorizontalAlign="Left" RowStyle-Height="30" BorderStyle="None" GridLines="Horizontal" Width="100%">
                 <Columns>
                     <asp:TemplateField HeaderText="SL No">
                         <ItemTemplate>
@@ -184,7 +184,7 @@
         </div>
         <div class="smallPanel Scroller">
             <div class="boxHeader">Select Scroller<span class="selected" runat="server" id="selected"></span></div>
-            <asp:GridView runat="server" ID="grdScroller" AutoGenerateColumns="false" OnRowCommand="grdScroller_RowCommand" HeaderStyle-HorizontalAlign="Left" RowStyle-Height="30" BorderStyle="None" GridLines="Horizontal" Width="100%">
+            <asp:GridView runat="server" ID="grdScroller" AutoGenerateColumns="false" OnRowCommand="grdScroller_RowCommand" AllowPaging="true" PageSize="10" OnPageIndexChanging="grdScroller_PageIndexChanging" HeaderStyle-HorizontalAlign="Left" RowStyle-Height="30" BorderStyle="None" GridLines="Horizontal" Width="100%">
                 <Columns>
                     <asp:TemplateField HeaderText="SL No">
                         <ItemTemplate>

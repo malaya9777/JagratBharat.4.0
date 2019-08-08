@@ -147,5 +147,17 @@ namespace JagratBharatNewsAdmin
             }
             loadScroller();
         }
+
+        protected void grdNews_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdNews.PageIndex = e.NewPageIndex;
+            loadLatesNews();
+        }
+
+        protected void grdScroller_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdScroller.PageIndex = e.NewPageIndex;
+            loadScroller();
+        }
     }
 }

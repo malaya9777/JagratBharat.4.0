@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="News.aspx.cs" Inherits="JagratBharatNews.News" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0"></script>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
@@ -98,24 +99,43 @@
                 text-align: justify;
             }
 
+        .shareButtons {
+            display: inline-flex;
+        }
+
         .fb-like {
             width: 50%;
         }
-        .whatsaap{
-            background-color:#24e51c;
-            text-decoration:none;
-            color:#fff;
-            padding:5px;
-            font-size:11px;
-            border-radius:3px;
+
+        .whatsaap {
+            background-color: #24e51c;
+            text-decoration: none;
+            color: #fff;
+            padding: 3px;
+            font-size: 11px;
+            border-radius: 3px;
+            margin-left:5px;
+            
         }
 
-        @media(max-width:600px) {
+        .twitter {
+            background-color: #009ac4;
+            text-decoration: none;
+            color: #fff;
+            padding: 3px;
+            font-size: 11px;
+            border-radius: 3px;
+            margin-left:5px;
+        }
+
+        @media(max-width:700px) {
             .header {
                 position: relative;
                 text-align: center;
                 height: 200px;
             }
+            
+            
 
             .PostHeader {
                 color: rgba(255,255,255,.8);
@@ -149,9 +169,11 @@
                     <p id="info" class="infoDetails" runat="server"></p>
                 </div>
 
-                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0"></script>
-                <div class="fb-share-button" data-href="" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-                <a class="whatsaap" id="whatsaapbutton" runat="server" href="whatsaap://send?text=" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> Share</a>
+                <div class="shareButtons">
+                    <div class="fb-share-button" data-href="" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                    <a class="whatsaap" id="whatsaapbutton" runat="server" href="whatsaap://send?text=" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> Share</a>
+                    <a class="twitter" id="twitterbutton" runat="server" href="https://twitter.com/intent/tweet?text=" data-size="large"><i class="fa fa-twitter"></i> Tweet</a>
+                </div>
                 <div id="PostContent" runat="server"></div>
                 <div class="fb-share-button" data-href="" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
 
@@ -169,6 +191,7 @@
         for (var i = 0; i < fbs.length; i++) {
             fbs[i].setAttribute("data-href", window.location.href);
         }
+       
 
     </script>
 

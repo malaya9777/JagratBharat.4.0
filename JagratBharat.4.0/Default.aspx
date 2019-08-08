@@ -290,10 +290,10 @@
             .container {
                 margin: 70px auto 30px auto;
                 display: grid;
-                grid-template-columns:99%;
-            }        
+                grid-template-columns: 99%;
+            }
 
-           
+
 
             .leftSidebar {
                 text-align: center;
@@ -337,7 +337,11 @@
             }
 
             .watch {
-                padding-bottom: 20px;
+                margin-bottom: 50px;
+            }
+
+            .videoFrame > iframe {
+                height:300px;
             }
         }
     </style>
@@ -374,7 +378,7 @@
         </div>
         <div class="rightSidebar">
             <div class="video">
-                <div runat="server" id="videoFrame">
+                <div runat="server" class="videoFrame" id="videoFrame">
                     <%-- Auto Generated Video --%>
                 </div>
             </div>
@@ -431,6 +435,6 @@
         let textp = document.getElementById("ContentPlaceHolder1_para");
         textWidht.style.width = textp.scrollWidth + "px";
         textp.style.animationDuration = (textp.scrollWidth / 100) * 4 + "s";
-        console.log(textp.scrollWidth);
+        
     </script>
 </asp:Content>

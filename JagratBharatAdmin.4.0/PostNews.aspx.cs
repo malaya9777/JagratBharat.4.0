@@ -39,14 +39,14 @@ namespace JagratBharatNewsAdmin
         // Load Post GridView
         private void loadPostGrid()
         {
-            var posts = db.Posts.Select(n => new
+            var posts = db.Posts.OrderByDescending(n=>n.PostedOn).Select(n => new
             {
                 n.Id,
                 ThumbnailImageURL = "ImageHandler.ashx?PostID=" + n.Id + "&Size=thumbnail",
                 OriginalImageURL = "ImageHandler.ashx?PostID=" + n.Id + "&Size=original",
                 PreviewURL = "Preview.aspx?ID=" + n.Id,
                 SendButtonCss = n.Submitted == true ? "btn green" : "btn orange",
-                SendButtonTxt = n.Submitted == true ? "Cancle" : "Send",
+                SendButtonTxt = n.Submitted == true ? "Depublish" : "Publish",
                 HeadLine = GlobalMethods.Truncate(n.HeadLine, 15),
                 n.Submitted
             }).ToList();
@@ -81,7 +81,7 @@ namespace JagratBharatNewsAdmin
                 }
             }
         }
-       
+
         // Split text into String Array
         public string[] splitText(string body)
         {
@@ -113,7 +113,10 @@ namespace JagratBharatNewsAdmin
             post.PostedBy = Convert.ToInt32(Session["LoginId"]);
             if (fImage.HasFile)
             {
-                post.Image = fImage.FileBytes;
+                System.Drawing.Image m = GlobalMethods.reduceImageSize(GlobalMethods.BinaryToImage(fImage.FileBytes));
+                MemoryStream ms = new MemoryStream();
+                m.Save(ms, ImageFormat.Jpeg);
+                post.Image = ms.ToArray();
             }
             post.VideoPath = videoEmbed.Text;
             if (!recordExists)
@@ -136,7 +139,7 @@ namespace JagratBharatNewsAdmin
                 ClientScript.RegisterClientScriptBlock(Page.GetType(), "loadBlank", "alert('Post ID:" + post.Id + " updated Successfully!')", true);
             }
             resetAll(sender, e);
-            
+
         }
 
         // Relode the page
@@ -144,8 +147,8 @@ namespace JagratBharatNewsAdmin
         {
             Response.Redirect(Request.RawUrl);
         }
-        
-        
+
+
         // Remove Old paragraph to add new Paragraph
         private void removeOldParagraphs(int id)
         {
@@ -165,7 +168,18 @@ namespace JagratBharatNewsAdmin
             else if (e.CommandName == "sendPost")
             {
                 submitPost(PostID);
+            }else if(e.CommandName == "deletePost")
+            {
+                deletePost(PostID);
             }
+        }
+
+        private void deletePost(int postID)
+        {
+            var post = db.Posts.Where(n => n.Id == postID).SingleOrDefault();
+            db.Posts.DeleteOnSubmit(post);
+            db.SubmitChanges();
+            loadPostGrid();
         }
 
 

@@ -112,7 +112,7 @@ namespace JagratBharatNewsAdmin
                 Horoscope horoscope = db.Horoscopes.Where(n => n.Id == horoscopeID).SingleOrDefault();
                 horoscope.Zodiac_ID = Convert.ToInt32(ddlZodiac.SelectedValue);
                 horoscope.Date = Convert.ToDateTime(txtDate.Text);
-                horoscope.Horoscope_English = txtHoroscope.Text;       
+                horoscope.Horoscope_English = txtHoroscope.Text;
 
             }
             db.SubmitChanges();
@@ -141,6 +141,19 @@ namespace JagratBharatNewsAdmin
                 var horoscopeID = Convert.ToInt16(e.CommandArgument);
                 loadEditData(horoscopeID);
             }
+        }
+
+
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            var date = DateTime.Now.AddDays(-7);
+            var horoscope = db.Horoscopes.Where(n => n.Date <= date);
+            var count = horoscope.Count();
+            db.Horoscopes.DeleteAllOnSubmit(horoscope);
+            db.SubmitChanges();
+            ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('" +count + " records delted!')", true);
+
         }
     }
 }
