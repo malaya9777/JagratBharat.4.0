@@ -114,8 +114,7 @@
             padding: 3px;
             font-size: 11px;
             border-radius: 3px;
-            margin-left:5px;
-            
+            margin-left: 5px;
         }
 
         .twitter {
@@ -125,7 +124,7 @@
             padding: 3px;
             font-size: 11px;
             border-radius: 3px;
-            margin-left:5px;
+            margin-left: 5px;
         }
 
         @media(max-width:700px) {
@@ -134,8 +133,8 @@
                 text-align: center;
                 height: 200px;
             }
-            
-            
+
+
 
             .PostHeader {
                 color: rgba(255,255,255,.8);
@@ -169,14 +168,20 @@
                     <p id="info" class="infoDetails" runat="server"></p>
                 </div>
 
+                   <%-- Share Buttons --%>
                 <div class="shareButtons">
                     <div class="fb-share-button" data-href="" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-                    <a class="whatsaap" id="whatsaapbutton" runat="server" href="whatsaap://send?text=" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> Share</a>
-                    <a class="twitter" id="twitterbutton" runat="server" href="https://twitter.com/intent/tweet?text=" data-size="large"><i class="fa fa-twitter"></i> Tweet</a>
+                    <a class="whatsaap" id="whatsaapbutton" runat="server" href="whatsaap://send?text=" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i>Share</a>
+                    <a class="twitter" id="twitterbutton" runat="server" href="https://twitter.com/intent/tweet?text=" data-size="large"><i class="fa fa-twitter"></i>Tweet</a>
                 </div>
                 <div id="PostContent" runat="server"></div>
-                <div class="fb-share-button" data-href="" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                <%-- Share Buttons --%>
 
+                <div class="shareButtons">
+                    <div class="fb-share-button" data-href="" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                    <a class="whatsaap" id="A1" runat="server" href="whatsaap://send?text=" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i>Share</a>
+                    <a class="twitter" id="A2" runat="server" href="https://twitter.com/intent/tweet?text=" data-size="large"><i class="fa fa-twitter"></i>Tweet</a>
+                </div>
                 <h5 class="relatedNews">Related News</h5>
 
                 <div id="RelatedNews" class="cards" runat="server">
@@ -191,7 +196,7 @@
         for (var i = 0; i < fbs.length; i++) {
             fbs[i].setAttribute("data-href", window.location.href);
         }
-       
+
 
     </script>
 
