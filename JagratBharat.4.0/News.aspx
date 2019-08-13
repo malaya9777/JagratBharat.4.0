@@ -111,21 +111,29 @@
             background-color: #24e51c;
             text-decoration: none;
             color: #fff;
-            padding: 3px;
+            padding: 3px 5px 3px 0px;
             font-size: 11px;
             border-radius: 3px;
             margin-left: 5px;
         }
 
+            .whatsaap > i {
+                padding: 0px 5px;
+            }
+
         .twitter {
             background-color: #009ac4;
             text-decoration: none;
             color: #fff;
-            padding: 3px;
+            padding: 3px 5px 3px 0px;
             font-size: 11px;
             border-radius: 3px;
             margin-left: 5px;
         }
+
+            .twitter > i {
+                padding: 0px 5px;
+            }
 
         @media(max-width:700px) {
             .header {
@@ -134,7 +142,10 @@
                 height: 200px;
             }
 
-
+            .cards {
+                
+                grid-template-columns: repeat(1, 1fr);                
+            }
 
             .PostHeader {
                 color: rgba(255,255,255,.8);
@@ -168,7 +179,7 @@
                     <p id="info" class="infoDetails" runat="server"></p>
                 </div>
 
-                   <%-- Share Buttons --%>
+                <%-- Share Buttons --%>
                 <div class="shareButtons">
                     <div class="fb-share-button" data-href="" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
                     <a class="whatsaap" id="whatsaapbutton" runat="server" href="whatsaap://send?text=" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i>Share</a>

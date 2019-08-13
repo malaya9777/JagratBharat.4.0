@@ -45,7 +45,7 @@ namespace JagratBharatNews
                 loadParagraph(paragraphs, loadVideo(post.VideoPath));
                 loadCards(post.Category, post.Id);
                 loadMetas(post);
-                loadWhatsaapButton(post);
+                loadShareButtons(post);
             }
             else
             {
@@ -54,7 +54,7 @@ namespace JagratBharatNews
 
         }
 
-        private void loadWhatsaapButton(Post post)
+        private void loadShareButtons(Post post)
         {
             whatsaapbutton.HRef = "whatsapp://send?text=" + post.HeadLine.Replace(' ', '+') + " " + new Uri(Page.Request.Url, Request.RawUrl);
             twitterbutton.HRef = "https://twitter.com/intent/tweet?text=" + post.HeadLine.Replace(' ', '+') + " " + new Uri(Page.Request.Url, Request.RawUrl);
