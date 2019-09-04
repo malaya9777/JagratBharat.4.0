@@ -9,9 +9,9 @@
 
             .container > .mainContainer {
                 padding: 60px 20px;
-                border-radius:0px 50px 0px 50px;
+                border-radius: 0px 50px 0px 50px;
                 background-color: #fff;
-                text-align:justify;
+                text-align: justify;
             }
 
                 .container > .mainContainer > span {
@@ -29,27 +29,20 @@
         <div class="mainContainer">
             <h2>Our Story</h2>
             <p>
-                Website.com began in 2005. After years in the web hosting industry, we realized that it 
-            was near impossible for the average Jane or Joe to create their own website. Traditional
-            web hosting services were simply too complicated, time consuming, and expensive to manage.
+                The JAGRAT BHARAT NEWS , started in 1st April 2019 as a Web portal and social media news network agency , became a daily in from same day and from then on has been steadily growing to the e-paper circulation of unlimited copies and a readership of growing about  much more. 
             </p>
             <p>
-                We created the Website.com Site Builder with the user's perspective in mind. We wanted to offer a
-            platform that would require no coding skills or design experience. We keep it simple, so users can focus on
-            creating an amazing website that reflects their brand. Best of all - it's free. You can get online, showcase your brand, 
-            or start selling products right away.
+                The JAGRAT BHARAT NEWS independent editorial stand and its reliable and balanced presentation of the news have over the years, won for it the serious attention and regard of the people who matter in India and abroad.
             </p>
             <p>
-                After seeing an increased need for ecommerce solutions, we developed one of the only fully-featured, 
-            free and commission-free online store builders, allowing business owners to launch their online business.
+                The JAGRAT BHARAT NEWS uses modern facilities for news gathering, page Composition. It is a revolutionary step in the global android mobile phone season . The publishing of e-paper is from our ofiice Banarpal and in near by angul District also. 
             </p>
             <p>
-                Today, we're proud to empower individuals and small business owners around the world. Everyone deserves a website,
-            and we're excited to see what you create.
+                Our achievements is readers and viewers of The JAGRAT BHARAT NEWS will be increasing in thousands and may be in lakhs.
             </p>
-            <span>Someone Name
+            <span>
                 <br />
-                <span>CEO, Jagrat Bharat News</span>
+                <span>The JAGRAT BHARAT NEWS team</span>
             </span>
         </div>
     </div>
