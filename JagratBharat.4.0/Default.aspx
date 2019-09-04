@@ -341,7 +341,7 @@
             }
 
             .videoFrame > iframe {
-                height:300px;
+                height: 300px;
             }
         }
     </style>
@@ -373,8 +373,9 @@
             <div class="mainNews">
             </div>
             <div style="height: 200px; margin: 20px 0px 10px 0px" class="advertisement">Advertisement</div>
-            <div id="fb-root"></div>
-
+            <div style="text-align: center">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FJagratBharatNews.in%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="350" height="500" style="border: none; overflow: hidden; text-align: center" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
         </div>
         <div class="rightSidebar">
             <div class="video">
@@ -427,6 +428,9 @@
                         src="https://free.timeanddate.com/clock/i6sq6m47/n1690/szw110/szh110/hocbbb/hbw6/cf100/hgr0/fas16/fdi64/mqc000/mqs4/mql20/mqw2/mqd94/mhc000/mhs3/mhl20/mhw2/mhd94/mmc000/mml10/mmw1/mmd94/hmr7/hsc000/hss1/hsl90"
                         frameborder="0" width="110" height="110"></iframe>
                 </div>
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0"></script>
+                <div class="fb-comments" data-href="https://www.facebook.com/JagratBharatNews.in/?modal=admin_todo_tour" data-width="100%" data-numposts="5"></div>
             </div>
         </div>
     </div>
@@ -435,6 +439,6 @@
         let textp = document.getElementById("ContentPlaceHolder1_para");
         textWidht.style.width = textp.scrollWidth + "px";
         textp.style.animationDuration = (textp.scrollWidth / 100) * 4 + "s";
-        
+
     </script>
 </asp:Content>
